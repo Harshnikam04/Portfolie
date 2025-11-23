@@ -418,77 +418,148 @@
         flex-wrap: wrap;
         justify-content: center;
       }
+    }
+  </style>
+</head>
 
-      Altium Designer,
-      KiCad,
-      Proteus,
-      LTspice,
-      Figma </li><li><strong>Programming</strong>C,
-      C++,
-      Python,
-      Java,
-      Embedded C </li><li><strong>Hardware</strong>Arduino,
-      ESP32/8266,
-      ATmega328p,
-      Raspberry Pi </li></ul></section><section id="certifications"><h2>Certifications</h2><ul class="cert-list"><li>IBM – Getting Started with Artificial Intelligence (2025)</li><li>Altium – PCB Design Course Completion</li></ul></section><section id="contact"><h2>Get In Touch</h2><div class="contact-content"><p><a href="mailto:harshnikam919@gmail.com">harshnikam919@gmail.com</a></p><p>+91 8454833491</p><p><a href="https://linkedin.com/in/harsh-nikam073652249" target="_blank">LinkedIn</a>&bull;
-      <a href="https://github.com/Harshnikam04" target="_blank">GitHub</a></p></div></section><footer><p>&copy;
+<body>
+  <header>
+    <nav>
+      <h1>HARSH NIKAM</h1>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      2025 Harsh Nikam. Crafted with precision.</p></footer>< !-- Modals --><div class="modal" id="modal"><div class="modal-content" id="modal-content"><h3 id="modal-title"></h3><img id="modal-image" src="" alt="Project Preview" /><p id="modal-description"></p><button class="close-btn" onclick="closeModal()">Close</button></div></div><script>const projectData= {
-        relay: {
-          title: "Relay Card Automation",
-            image: "relay.JPG",
-            description: "Designed a robust relay card using ULN2803 for multi-channel automation, featuring a custom PCB layout optimized for signal integrity."
-        }
+  <section class="hero">
+    <h2>Harsh Nikam</h2>
+    <p>Electronics & Telecommunication Engineering Student<br>Embedded Systems | IoT | PCB Design</p>
+    <a href="Harsh_Nikam_Resume.pdf" class="btn">Download Resume</a>
+  </section>
 
-        ,
-        agrodew: {
-          title: "AGRODEW System",
-            image: "agrodew.jpg",
-            description: "Innovative 3-phase motor control system operable via SMS, designed to aid farmers in remote irrigation management."
-        }
+  <section id="projects">
+    <h2>Selected Projects</h2>
+    <div class="project-gallery">
+      <div class="project-card" onclick="openModal('relay')">
+        <img src="relay.JPG" alt="Relay Card" />
+        <h3>Relay Card Automation</h3>
+      </div>
+      <div class="project-card" onclick="openModal('agrodew')">
+        <img src="agrodew.jpg" alt="AGRODEW" />
+        <h3>AGRODEW System</h3>
+      </div>
+      <div class="project-card" onclick="openModal('gsm')">
+        <img src="gsm.jpg" alt="Rover" />
+        <h3>ESP32 Rover</h3>
+      </div>
+    </div>
+  </section>
 
-        ,
-        gsm: {
-          title: "ESP32 Rover",
-            image: "gsm.jpg",
-            description: "A versatile rover platform powered by ESP32, capable of remote navigation and sensor data collection."
-        }
+  <section id="skills">
+    <h2>Technical Expertise</h2>
+    <ul class="skills-list">
+      <li>
+        <strong>Design Tools</strong>
+        Altium Designer, KiCad, Proteus, LTspice, Figma
+      </li>
+      <li>
+        <strong>Programming</strong>
+        C, C++, Python, Java, Embedded C
+      </li>
+      <li>
+        <strong>Hardware</strong>
+        Arduino, ESP32/8266, ATmega328p, Raspberry Pi
+      </li>
+    </ul>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul class="cert-list">
+      <li>IBM – Getting Started with Artificial Intelligence (2025)</li>
+      <li>Altium – PCB Design Course Completion</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Get In Touch</h2>
+    <div class="contact-content">
+      <p><a href="mailto:harshnikam919@gmail.com">harshnikam919@gmail.com</a></p>
+      <p>+91 8454833491</p>
+      <p>
+        <a href="https://linkedin.com/in/harsh-nikam073652249" target="_blank">LinkedIn</a> &bull;
+        <a href="https://github.com/Harshnikam04" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Harsh Nikam. Crafted with precision.</p>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal" id="modal">
+    <div class="modal-content" id="modal-content">
+      <h3 id="modal-title"></h3>
+      <img id="modal-image" src="" alt="Project Preview" />
+      <p id="modal-description"></p>
+      <button class="close-btn" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const projectData = {
+      relay: {
+        title: "Relay Card Automation",
+        image: "relay.JPG",
+        description: "Designed a robust relay card using ULN2803 for multi-channel automation, featuring a custom PCB layout optimized for signal integrity."
+      },
+      agrodew: {
+        title: "AGRODEW System",
+        image: "agrodew.jpg",
+        description: "Innovative 3-phase motor control system operable via SMS, designed to aid farmers in remote irrigation management."
+      },
+      gsm: {
+        title: "ESP32 Rover",
+        image: "gsm.jpg",
+        description: "A versatile rover platform powered by ESP32, capable of remote navigation and sensor data collection."
       }
+    };
 
-      ;
+    function openModal(key) {
+      const data = projectData[key];
+      const modal = document.getElementById('modal');
 
-      function openModal(key) {
-        const data=projectData[key];
-        const modal=document.getElementById('modal');
+      document.getElementById('modal-title').innerHTML = data.title;
+      document.getElementById('modal-image').src = data.image;
+      document.getElementById('modal-description').innerHTML = data.description;
 
-        document.getElementById('modal-title').innerHTML=data.title;
-        document.getElementById('modal-image').src=data.image;
-        document.getElementById('modal-description').innerHTML=data.description;
+      modal.style.display = 'flex';
+      // Trigger reflow
+      void modal.offsetWidth;
+      modal.classList.add('show');
+    }
 
-        modal.style.display='flex';
-        // Trigger reflow
-        void modal.offsetWidth;
-        modal.classList.add('show');
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 300);
+    }
+
+    // Close modal on outside click
+    window.onclick = function (event) {
+      const modal = document.getElementById('modal');
+      if (event.target == modal) {
+        closeModal();
       }
+    }
+  </script>
+</body>
 
-      function closeModal() {
-        const modal=document.getElementById('modal');
-        modal.classList.remove('show');
-
-        setTimeout(()=> {
-            modal.style.display='none';
-          }
-
-          , 300);
-      }
-
-      // Close modal on outside click
-      window.onclick=function (event) {
-        const modal=document.getElementById('modal');
-
-        if (event.target==modal) {
-          closeModal();
-        }
-      }
-
-      </script></body></html>
+</html>
